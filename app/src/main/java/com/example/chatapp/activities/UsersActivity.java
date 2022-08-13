@@ -34,7 +34,8 @@ public class UsersActivity extends AppCompatActivity implements UserListener {
     }
 
     private void setListeners() {
-        binding.imageBack.setOnClickListener(v -> onBackPressed());
+        binding.imageBack.setOnClickListener(v ->
+                startActivity(new Intent(getApplicationContext(), MainActivity.class)));
     }
 
     private void getUsers() {
@@ -56,6 +57,7 @@ public class UsersActivity extends AppCompatActivity implements UserListener {
                             user.email = queryDocumentSnapshot.getString(Constants.KEY_EMAIL);
                             user.image = queryDocumentSnapshot.getString(Constants.KEY_IMAGE);
                             user.token = queryDocumentSnapshot.getString(Constants.KEY_FCM_TOKEN);
+                            user.id = queryDocumentSnapshot.getId();
                             users.add(user);
                         }
                         if (users.size() > 0) {
