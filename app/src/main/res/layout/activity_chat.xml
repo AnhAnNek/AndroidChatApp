@@ -80,7 +80,7 @@
         android:id="@+id/textAvailability"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#008000"
+        android:background="@color/green"
         android:padding="@dimen/_2sdp"
         android:text="@string/online"
         android:gravity="center"

@@ -38,7 +38,7 @@ public class ChatActivity extends BaseActivity {
     private PreferenceManager preferenceManager;
     private FirebaseFirestore database;
     private String conversionId = null;
-    private Boolean isReceicerAvailable = false;
+    private Boolean isReceiverAvailable = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,10 +102,10 @@ public class ChatActivity extends BaseActivity {
                     int availability = Objects.requireNonNull(
                             value.getLong(Constants.KEY_AVAILABILITY)
                     ).intValue();
-                    isReceicerAvailable = availability == 1;
+                    isReceiverAvailable = availability == 1;
                 }
             }
-            if (isReceicerAvailable) {
+            if (isReceiverAvailable) {
                 binding.textAvailability.setVisibility(View.VISIBLE);
             } else {
                 binding.textAvailability.setVisibility(View.GONE);
