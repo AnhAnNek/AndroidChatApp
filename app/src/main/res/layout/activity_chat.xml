@@ -86,7 +86,7 @@
         android:gravity="center"
         android:textColor="@color/white"
         android:textSize="@dimen/_10ssp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@id/viewSupporter" />
 
     <androidx.recyclerview.widget.RecyclerView
