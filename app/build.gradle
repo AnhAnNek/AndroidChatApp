@@ -29,6 +29,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+    namespace 'com.example.chatapp'
 }
 
 dependencies {
@@ -63,4 +64,6 @@ dependencies {
 
     //Work Manager dependency
     implementation 'androidx.work:work-runtime:2.7.1'
+
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
 }
